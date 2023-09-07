@@ -65,14 +65,13 @@
 		<link rel="stylesheet" href="https://use.typekit.net/ltb2eqy.css" media="none" onload="this.media='all';">
 
 		<!-- GOOGLE MAPS API KEY -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe1XURM8FoBra_VKupkfkgM4StpHK0pn0" defer></script>
-		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe1XURM8FoBra_VKupkfkgM4StpHK0pn0&callback=initMap&libraries=&v=weekly" defer></script>-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=******" defer></script>
 
 		<!-- FANCYBOX -->
 		<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox.js"></script>
 		<link href="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
 
-		<?php if(get_field('google_analytics','options')){ 
+		<?php if(get_field('google_analytics','options')){
 			$gaID = get_field('google_analytics','options');
 		?>
 
@@ -88,7 +87,7 @@
 
 		<?php }?>
 
-		<?php if(get_field(' second_google_analytics_tracker','options')){ 
+		<?php if(get_field(' second_google_analytics_tracker','options')){
 				$gaID2 = get_field(' second_google_analytics_tracker','options');
 		?>
 
@@ -104,7 +103,7 @@
 
 		<?php }?>
 
-		<?php if(get_field('google_tag_manager_id','options')){ 
+		<?php if(get_field('google_tag_manager_id','options')){
 			$gtagID = get_field('google_tag_manager_id','options');
 		?>
 			<!-- Google Tag Manager -->
@@ -119,9 +118,9 @@
 
 		<!-- CUSTOM HEADER CODE -->
 		<?php if(get_field('custom_header_code','options')){?>
-		
+
 			<?php echo '<div class="invisContainer">'.get_field('custom_header_code','options').'</div>';?>
-		
+
 		<?php }?>
 		<!-- CUSTOM HEADER CODE -->
 
@@ -133,9 +132,9 @@
 
 		<!-- CUSTOM BODY CODE -->
 		<?php if(get_field('custom_body_code','options')){?>
-		
+
 			<?php echo '<div class="invisContainer">'.get_field('custom_body_code','options').'</div>';?>
-		
+
 		<?php }?>
 		<!-- CUSTOM BODY CODE -->
 
@@ -154,12 +153,12 @@
 			$xchgLogo = $xchgLogo[0];
 			if($xchgLogo == '' || $xchgLogo == NULL){
 				$xchgLogo = get_template_directory_uri().'/images/xchngEmblem.png';
-			} 
+			}
 		?>
 
 
 <style type="text/css">
-			
+
 
 
 </style>
@@ -177,7 +176,7 @@
 
 
 		<header id="topContainer" class="<?php echo $tmClass;?>">
-			
+
 			<div id="tpWrapper" class="rel">
 
 				<a href="<?php echo $homeUrl;?>" id="logoContainer">
@@ -207,8 +206,8 @@
 							<?php if(have_rows('social_media','options')){ ?>
 
 								<div id="msmContainer" class="<?php echo $shClass;?>">
-									<?php 
-										while(have_rows('social_media','options')): 
+									<?php
+										while(have_rows('social_media','options')):
 											the_row();
 											$msmType = get_sub_field('social_type');
 											$msmLink = get_sub_field('social_link');
@@ -264,16 +263,16 @@
 
 		</header><!-- END OF TOPCONTAINER -->
 
-		<?php 
+		<?php
 			if(is_single()){
-				
+
 			}else{
 				if(is_page_template('templates/directory.php')){
 					//get_sidebar('directTop');
 				}else{
 					get_sidebar('topslider');
 				}
-			} 
+			}
 		?>
 
 		<main id="xchngWrapper" role="main">
